@@ -40,14 +40,18 @@ router.get('/rooms/add', function (req, res) {
 router.get('/rooms/edit/:slug', function(req, res) {
   Room.find({ slug: req.params.slug }, function(err, rooms) {
     if (err) throw err;
-    res.render('settings-edit-room', {
-      breadcrumb: '> Settings > Edit Room',
-      page: 'settings',
-      roomID: rooms[0]._id,
-      roomName: rooms[0].name,
-      roomSlug: rooms[0].slug,
-      roomIcon: rooms[0].icon
-    });
+    if(rooms.length) {
+      res.render('settings-edit-room', {
+        breadcrumb: '> Settings > Edit Room',
+        page: 'settings',
+        roomID: rooms[0]._id,
+        roomName: rooms[0].name,
+        roomSlug: rooms[0].slug,
+        roomIcon: rooms[0].icon
+      });
+    } else {
+      res.render('404');
+    }
   });
 });
 

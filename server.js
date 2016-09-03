@@ -53,6 +53,10 @@ app.use('/api/nodes', require('./routes/nodes'));
 app.use('/api/rooms', require('./routes/rooms'));
 app.use('/settings', require('./routes/settings'));
 
+app.get('/*', function (req, res) {
+  res.render('404');
+});
+
 // Server Start
 app.listen(port);
 
