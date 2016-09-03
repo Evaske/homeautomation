@@ -8,8 +8,17 @@ var zwave = new ZWave({
   Logging: false
 });
 
+var os = require('os');
+
 // Connection using USB
 zwave.connect('/dev/cu.usbmodem1411');
+
+zwavedriverpaths = {
+	"darwin" : '/dev/cu.usbmodem1411',
+	"linux"  : '/dev/ttyACM0'
+}
+
+zwave.connect( zwavedriverpaths[os.platform()] );
 
 var scanComplete = false;
 

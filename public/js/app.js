@@ -6,14 +6,14 @@ $('.toggle-wrapper').on('click', function () {
     $(this).addClass('on').removeClass('off');
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:8080/api/nodes/' + nodeID,
+      url: '/api/nodes/' + nodeID,
       data: { action: 'on' }
     });
   } else {
     $(this).addClass('off').removeClass('on');
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:8080/api/nodes/' + nodeID,
+      url: '/api/nodes/' + nodeID,
       data: { action: 'off' }
     });
   }
@@ -23,7 +23,7 @@ $('.toggle-wrapper').on('click', function () {
 $('.delete-node').on('click', function () {
   $.ajax({
     type: 'DELETE',
-    url: 'http://localhost:8080/api/nodes/',
+    url: '/api/nodes/',
     success: function() {
       $('.notification').slideDown().text('Please unpair the node using the device button').delay(2000).slideUp();
     }
@@ -38,7 +38,7 @@ $('#addNode').on('click', function (event) {
 
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:8080/api/nodes/',
+    url: '/api/nodes/',
     data: {name: name, room: room, type: type },
     success: function() {
       $('.notification').slideDown().text('Please pair the node using the device button').delay(2000).slideUp();
@@ -52,7 +52,7 @@ $('.room-delete').on('click', function () {
   var slug = $(this).parent().attr('data-roomid');
   $.ajax({
     type: 'DELETE',
-    url: 'http://localhost:8080/api/rooms/',
+    url: '/api/rooms/',
     data: { slug: slug },
     success: function() {
       window.location.replace("/settings/rooms/");
@@ -68,7 +68,7 @@ $('#addRoom').on('click', function (event) {
 
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:8080/api/rooms/',
+    url: '/api/rooms/',
     data: {name: name, slug: slug, icon: icon },
     success: function() {
       window.location.replace("/settings/rooms/");
@@ -86,7 +86,7 @@ $('#updateRoom').on('click', function (event) {
 
   $.ajax({
     type: 'PUT',
-    url: 'http://localhost:8080/api/rooms/',
+    url: '/api/rooms/',
     data: {slugold: slugOld, name: name, slug: slug, icon: icon },
     success: function() {
       $('.notification').slideDown().text('Room successfully updated').delay(2000).slideUp();
