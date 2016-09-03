@@ -4,8 +4,11 @@ include partials/head.pug
   .content-wrapper
     include partials/sidebar.pug
     .content
-      each room, i in rooms
-        a.tile(href='/rooms/' + room.slug)
-          img(src=room.icon).
-          .title #{room.name}
+      if rooms.length
+        each room, i in rooms
+          a.tile(href='/rooms/' + room.slug)
+            img(src=room.icon).
+            .title #{room.name}
+      else
+        p No rooms have been added yet
 include partials/footer.pug
