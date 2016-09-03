@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    title HomeAutomation - Add Node
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/selectbox.css')
+  body
+    .wrapper
+      include topbar.pug
+      .content-wrapper
+        include sidebar.pug
+        .content
+          h2 Add Node
+          .input-wrapper
+            label Node Name
+            input(type="text", placeholder="Node Name", id="nodeName")
+          .input-wrapper
+            label Node Type
+            select(id="nodeType")
+              option(value="socket") Socket
+              option(value="dimmer") Light - Dimmer
+              option(value="light") Light - On/Off
+          .input-wrapper
+            label Node Location
+            select(id="nodeLocation")
+              each room, i in rooms
+                option(value=room.slug) #{room.name}
+          .input-wrapper
+            input(type="submit", value="Add Node", id="addNode")
+
+  script(src='https://code.jquery.com/jquery-3.1.0.min.js', type='text/javascript')
+  script(src='/js/selectbox.js', type='text/javascript')
+  script(src='/js/app.js', type='text/javascript')

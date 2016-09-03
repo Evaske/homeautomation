@@ -1,0 +1,282 @@
+body {
+  background: url('../images/background.jpg');
+  background-size: cover;
+  font-family: 'Open Sans';
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 50px auto;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.top-bar {
+  background: #34383c;
+  border-radius: 8px 8px 0 0;
+  height: 67px;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  background: #1e2226;
+  border-radius: 8px 0 0 0;
+  cursor: pointer;
+  float: left;
+  height: 67px;
+  text-align: center;
+  width: 80px;
+}
+
+.logo-inner img {
+  margin-top: 18px;
+  width: 30px;
+}
+
+.breadcrumb {
+  border-radius: 0 8px 0 0;
+  color: #929aa2;
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 13px;
+  height: 67px;
+  line-height: 67px;
+  padding-left: 30px;
+}
+
+.username {
+  background: #1e2226;
+  border-radius: 0 8px 0 0;
+  color: #929aa2;
+  float: right;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 13px;
+  height: 67px;
+  line-height: 67px;
+  padding: 0 30px;
+}
+
+.content-wrapper {
+  background: #f3f3f3;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  min-height: 500px;
+}
+
+.notification {
+  background: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+  display: none;
+  line-height: 50px;
+  font-size: 14px;
+  height: 50px;
+  padding: 0 20px;
+  font-weight: 300;
+  left: 90px;
+  right: 135px;
+  position: absolute;
+  top: 8px;
+}
+
+.sidebar {
+  background: #91c46b;
+  border-radius: 0 0 0 8px;
+  display: flex;
+  flex: 0 0 80px;
+  flex-direction: column;
+  padding: 20px 0;
+  align-items: center;
+}
+
+.sidebar .icon {
+  display: block;
+  position: relative;
+}
+
+.sidebar .icon.active:after {
+  color: #f3f3f3;
+  content: '\25C0';
+  position: absolute;
+  right: -28px;
+  top: 0;
+}
+
+.sidebar .top-icons {
+  flex: 1;
+}
+
+.sidebar .bottom-icons {
+  display: flex;
+  flex: 0 0 50px;
+  align-items: flex-end;
+}
+
+.sidebar img {
+  width: 30px;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.tile {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #6c757e;
+  cursor: pointer;
+  display: inline-block;
+  padding: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 30px;
+  width: 150px;
+}
+
+.tile:hover {
+  border: 2px solid #91c46b;
+}
+
+.tile img {
+  display: inline-block;
+  width: 60px;
+}
+
+.tile .title {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+h2 {
+  color: #6c7277;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.socket {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .01);
+  height: 50px;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.socket img {
+  float: left;
+  margin: 10px 10px 0 10px;
+  width: 30px;
+}
+
+.socket .delete {
+  cursor: pointer;
+  float: right;
+}
+
+.socket .name {
+  line-height: 50px;
+  float: left;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.toggle-wrapper {
+  background: #f4f4f4;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  height: 30px;
+  margin: 10px;
+  position: relative;
+  width: 60px;
+}
+
+.toggle-wrapper .toggle {
+  background: #91c46b;
+  border-radius: 8px;
+  height: 26px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  transition: left .25s linear;
+}
+
+.toggle-wrapper.off .toggle {
+  background: #f15822;
+  left: 28px;
+}
+
+.input-wrapper {
+  display: block;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.input-wrapper label {
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.input-wrapper input[type="text"] {
+  background: #fff;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #6c7277;
+  font-size: 15px;
+  font-weight: 300;
+  height: 40px;
+  margin-top: 10px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.input-wrapper input[type="submit"] {
+  background: #91c46b;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 300;
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  padding: 0 30px;
+}
+
+.input-wrapper input[type="submit"]:hover {
+  background: #57893e;
+}
+
+.add-room {
+  background: #91c46b;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 300;
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  padding: 0 30px;
+  text-decoration: none;
+}

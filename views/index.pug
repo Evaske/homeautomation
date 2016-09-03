@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    title HomeAutomation - Dashboard
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .wrapper
+      include topbar.pug
+      .content-wrapper
+        include sidebar.pug
+        .content
+          each room, i in rooms
+            a.tile(href='/rooms/' + room.slug)
+              img(src=room.icon).
+              .title #{room.name}
