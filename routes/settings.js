@@ -41,7 +41,7 @@ router.get('/rooms/edit/:slug', function(req, res) {
   Room.find({ slug: req.params.slug }, function(err, rooms) {
     if (err) throw err;
     res.render('settings-edit-room', {
-      breadcrumb: '> Settings > Rooms > Edit Room',
+      breadcrumb: '> Settings > Edit Room',
       page: 'settings',
       roomID: rooms[0]._id,
       roomName: rooms[0].name,

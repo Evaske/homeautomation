@@ -98,4 +98,30 @@ $('#updateRoom').on('click', function (event) {
   event.preventDefault();
 });
 
+$('.mobile-menu').on('click', function () {
+  if($(this).hasClass('open')) {
+    $('.mobile-dropdown').animate({'left':'-100%'});
+    $(this).removeClass('open');
+  } else {
+    $('.mobile-dropdown').animate({'left':'0'});
+    $(this).addClass('open');
+  }
+});
+
+$('.close-menu').on('click', function () {
+  if($('.mobile-menu').hasClass('open')) {
+    $('.mobile-dropdown').animate({'left':'-100%'});
+    $('.mobile-menu').removeClass('open');
+  } else {
+    $('.mobile-dropdown').animate({'left':'0'});
+    $('.mobile-menu').addClass('open');
+  }
+});
+
+document.documentElement.addEventListener('touchstart', function (event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, false);
+
 $('select').selectBox();

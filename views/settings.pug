@@ -1,20 +1,16 @@
-doctype html
-html(lang="en")
-  head
-    title HomeAutomation - Settings
-    link(rel='stylesheet', href='/css/style.css')
-  body
-    .wrapper
-      include topbar.pug
-      .content-wrapper
-        include sidebar.pug
-        .content
-          a.tile(href='/settings/nodes/add')
-            img(src='/images/nodes.svg')
-            .title Add Node
-          a.tile(href='', class="delete-node")
-            img(src='/images/nodes.svg')
-            .title Remove Node
-          a.tile(href='/settings/rooms/')
-            img(src='/images/rooms.svg')
-            .title Room Settings
+include partials/head.pug
+.wrapper
+  include partials/topbar.pug
+  .content-wrapper
+    include partials/sidebar.pug
+    .content
+      a.tile(href='/settings/nodes/add')
+        img(src='/images/nodes.svg')
+        .title Add Node
+      a.tile(href='', class="delete-node")
+        img(src='/images/nodes.svg')
+        .title Remove Node
+      a.tile(href='/settings/rooms/')
+        img(src='/images/rooms.svg')
+        .title Room Settings
+include partials/footer.pug

@@ -1,25 +1,18 @@
-doctype html
-html(lang="en")
-  head
-    title HomeAutomation - Living Room
-    link(rel='stylesheet', href='/css/style.css')
-  body
-    .wrapper
-      include topbar.pug
-      .content-wrapper
-        include sidebar.pug
-        .content
-          h2 Sockets
-          each socket, i in sockets
-            .socket(data-nodeid=socket.node_id)
-              img(src='/images/plug.svg')
-              .name #{socket.name}
-              if socket.value
-                .toggle-wrapper
-                  .toggle
-              else
-                .toggle-wrapper.off
-                  .toggle
-
-  script(src='https://code.jquery.com/jquery-3.1.0.min.js', type='text/javascript')
-  script(src='/js/app.js', type='text/javascript')
+include partials/head.pug
+.wrapper
+  include partials/topbar.pug
+  .content-wrapper
+    include partials/sidebar.pug
+    .content
+      h2 Sockets
+      each socket, i in sockets
+        .tile-horizontal(data-nodeid=socket.node_id)
+          img(src='/images/plug.svg')
+          .name #{socket.name}
+          if socket.value
+            .toggle-wrapper
+              .toggle
+          else
+            .toggle-wrapper.off
+              .toggle
+include partials/footer.pug
