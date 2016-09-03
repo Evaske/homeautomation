@@ -1,0 +1,42 @@
+//  Reset Stylesheet
+//  ----------------
+//  General reset stylesheet so all browsers
+//  are using a similar starting point for styling
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.6em;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+}

@@ -1,0 +1,48 @@
+.sidebar {
+  align-items: center;
+  background: $green;
+  border-radius: 0 0 0 8px;
+  display: flex;
+  flex: 0 0 80px;
+  flex-direction: column;
+  padding: 20px 0;
+
+  .icon {
+    display: block;
+    position: relative;
+
+    &.active:after {
+      color: $main-background;
+      content: '\25C0 \FE0E';
+      position: absolute;
+      right: -29px;
+      top: 0;
+    }
+  }
+
+  .top-icons {
+    flex: 1;
+  }
+
+  .bottom-icons {
+    align-items: flex-end;
+    display: flex;
+    flex: 0 0 50px;
+  }
+
+  img {
+    width: 30px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .sidebar {
+    border-radius: 0;
+  }
+}
+
+@media all and (max-width: $mobile) {
+  .sidebar {
+    display: none;
+  }
+}

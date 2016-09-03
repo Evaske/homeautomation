@@ -1,0 +1,89 @@
+.top-bar {
+  background: $mid-grey;
+  border-radius: 8px 8px 0 0;
+  height: 67px;
+  position: relative;
+  width: 100%;
+
+  .logo {
+    background: $dark-grey;
+    border-radius: 8px 0 0 0;
+    cursor: pointer;
+    float: left;
+    height: 67px;
+    text-align: center;
+    width: 80px;
+
+    img {
+      margin-top: 18px;
+      width: 30px;
+    }
+  }
+
+  .breadcrumb {
+    border-radius: 0 8px 0 0;
+    color: $light-text;
+    display: inline-block;
+    font-size: 13px;
+    height: 67px;
+    line-height: 67px;
+    padding-left: 30px;
+  }
+
+  .username {
+    background: $dark-grey;
+    border-radius: 0 8px 0 0;
+    color: $light-text;
+    float: right;
+    font-size: 13px;
+    height: 67px;
+    line-height: 67px;
+    padding: 0 30px;
+  }
+
+  .mobile-menu {
+    background: $dark-grey;
+    border-radius: 0 8px 0 0;
+    color: $light-text;
+    cursor: pointer;
+    display: none;
+    float: right;
+    font-size: 13px;
+    height: 67px;
+    line-height: 67px;
+    padding: 0 20px;
+
+    img {
+      margin-top: 19px;
+      width: 30px;
+    }
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .top-bar {
+    border-radius: 0;
+
+    .logo,
+    .username {
+      border-radius: 0;
+    }
+  }
+}
+
+@media all and (max-width: $mobile) {
+  .top-bar {
+
+    .logo {
+      width: 50px;
+    }
+
+    .mobile-menu {
+      display: inline-block;
+    }
+
+    .username {
+      display: none;
+    }
+  }
+}
