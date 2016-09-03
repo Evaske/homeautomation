@@ -7,7 +7,7 @@ include partials/head.pug
       h2 Rooms
       each room, i in rooms
         .tile-horizontal(data-roomid=room.slug)
-          img(src='/images/rooms.svg')
+          img(src=room.icon)
           .name #{room.name}
           img(src='/images/garbage.svg', class='delete', class='room-delete')
           a(href="/settings/rooms/edit/" + room.slug)
