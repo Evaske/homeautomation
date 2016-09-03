@@ -5,14 +5,17 @@ include partials/head.pug
     include partials/sidebar.pug
     .content
       h2 Sockets
-      each socket, i in sockets
-        .tile-horizontal(data-nodeid=socket.node_id)
-          img(src='/images/plug.svg')
-          .name #{socket.name}
-          if socket.value
-            .toggle-wrapper
-              .toggle
-          else
-            .toggle-wrapper.off
-              .toggle
+      if sockets.length
+        each socket, i in sockets
+          .tile-horizontal(data-nodeid=socket.node_id)
+            img(src='/images/plug.svg')
+            .name #{socket.name}
+            if socket.value
+              .toggle-wrapper
+                .toggle
+            else
+              .toggle-wrapper.off
+                .toggle
+      else
+        p There are no sockets added for this room. Why not add one in the settings?
 include partials/footer.pug
