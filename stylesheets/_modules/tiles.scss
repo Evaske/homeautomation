@@ -97,3 +97,18 @@
     width: 100%;
   }
 }
+
+@media all and (max-width: 330px) {
+  .tile {
+    margin-right: 20px;
+    width: 130px;
+
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
+
+  .tile-horizontal {
+    width: 100%;
+  }
+}

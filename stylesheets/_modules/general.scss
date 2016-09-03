@@ -92,3 +92,9 @@ body {
     text-align: center;
   }
 }
+
+@media all and (max-width: 330px) {
+  .wrapper .content-wrapper .content {
+    padding: 16px;
+  }
+}

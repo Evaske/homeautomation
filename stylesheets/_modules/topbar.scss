@@ -87,3 +87,12 @@
     }
   }
 }
+
+@media all and (max-width: 330px) {
+  .top-bar {
+
+    .breadcrumb {
+      padding-left: 10px;
+    }
+  }
+}

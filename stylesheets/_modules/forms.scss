@@ -38,7 +38,8 @@
     text-align: left;
   }
 
-  input[type="text"] {
+  input[type="text"],
+  select {
     background: $white;
     border: 0;
     border-radius: 8px;
@@ -49,6 +50,10 @@
     margin-top: 10px;
     padding-left: 20px;
     width: 100%;
+  }
+
+  select {
+    -webkit-appearance: none;
   }
 
   input[type="submit"],
